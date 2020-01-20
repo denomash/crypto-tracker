@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 
 import FetchCoinData from './../Actions/FetchCoinData';
-import CoinCard from './index';
+import CoinCard from './CoinCard';
 
 class CryptoContainer extends Component {
   componentWillMount() {
@@ -46,6 +46,7 @@ class CryptoContainer extends Component {
       <ScrollView contentContainerStyle={contentContainer}>
         {this.renderCoinCards()}
       </ScrollView>
+      // <Text>Yooo!!</Text>
     );
   }
 }
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
   }
 });
 
-mapStateToProps = state => ({
+const mapStateToProps = state => ({
   crypto: state.crypto
 });
 
