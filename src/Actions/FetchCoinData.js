@@ -14,7 +14,7 @@ const FetchCoinData = () => dispatch => {
     .then(res =>
       dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: res.data })
     )
-    .catch(err => dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: err }));
+    .catch(err => dispatch({ type: FETCHING_COIN_DATA_FAIL, payload: err }));
 };
 
 export default FetchCoinData;

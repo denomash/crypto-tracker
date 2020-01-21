@@ -13,14 +13,15 @@ class CryptoContainer extends Component {
 
   renderCoinCards() {
     const { crypto } = this.props;
+
     return crypto.data.map(coin => (
       <CoinCard
         key={coin.name}
         coin_name={coin.name}
         symbol={coin.symbol}
         price_usd={coin.price_usd}
-        percentage_change_24hr={coin.percentage_change_24hr}
-        percentage_change_7d={coin.percentage_change_7d}
+        percentage_change_24hr={coin.percent_change_24h}
+        percentage_change_7d={coin.percent_change_7d}
       />
     ));
   }
@@ -46,7 +47,6 @@ class CryptoContainer extends Component {
       <ScrollView contentContainerStyle={contentContainer}>
         {this.renderCoinCards()}
       </ScrollView>
-      // <Text>Yooo!!</Text>
     );
   }
 }
